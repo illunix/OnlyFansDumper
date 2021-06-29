@@ -1,0 +1,20 @@
+﻿<Window x:Class="OnlyFansDumper.Pages.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:s="https://github.com/canton7/Stylet"
+        xmlns:local="clr-namespace:OnlyFansDumper.Pages"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance local:ShellViewModel}"
+        Title="OnlyFans Dumper" Height="400" Width="280" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="108" Margin="0,22,0,0" VerticalAlignment="Top" Width="216" Source="/Pages/onlyfans_logo.png" />
+        <Label Content="Dumper" HorizontalAlignment="Left" Margin="150,69,0,0" VerticalAlignment="Top" Height="72" Width="130" FontFamily="Gotham" FontSize="20" Foreground="Black"/>
+        <TextBox Text="{Binding OnlyFansProfileName}" HorizontalAlignment="Center" Margin="0,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="23" />
+        <Label Content="OnlyFans profile name" HorizontalAlignment="Left" Margin="16,146,0,0" VerticalAlignment="Top" FontSize="13" Height="30" Width="139"/>
+        <ProgressBar Value="{Binding WorkerState}" HorizontalAlignment="Center" Height="33" Margin="0,288,0,0" VerticalAlignment="Top" Width="218"/>
+        <Button Command="{s:Action Dump}" Content="Dump" HorizontalAlignment="Left" Margin="171,246,0,0" VerticalAlignment="Top" Width="71" Height="26" />
+        <Label Content="{Binding DumpState}" HorizontalAlignment="Left" Margin="18,321,0,0" VerticalAlignment="Top" Width="210" FontSize="11"/>
+    </Grid>
+</Window>

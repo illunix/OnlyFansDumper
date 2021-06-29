@@ -1,0 +1,25 @@
+﻿@model OnlyFansDumper.Web.Features.Dashboard.Index.Model
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row" style="margin-top: 10px">
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>@Model.TodayMiners</h3>
+
+                <p>Today Miners</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-green">
+            <div class="inner">
+                <h3>@Model.TotalMiners</h3>
+
+                <p>Total Miners</p>
+            </div>
+        </div>
+    </div>
+</div>
